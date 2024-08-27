@@ -18,6 +18,10 @@
         .font-manrope{
             font-family: "Manrope", sans-serif;
         }
+        .curv{
+          bottom: 720px;
+          left: 60px;
+        }
         /* body, section, main, header, div, nav, button, a, img, h1{
           border : 2px solid red;
         } */
@@ -29,6 +33,7 @@
               colors: {
                 clifford: '#da373d',
                 'btn-primary': '#ABEF5F',
+                'section-secondary': '#f2f2f2',
                 'btn-secondary': 'rgba(171, 239, 95, 0.5)',
                 'section-primary': 'rgba(255, 255, 255, 1)',
               }
@@ -109,6 +114,47 @@
             </div>
          </section>
         </header>
+        <!-- about section -->
+         <section class="mt-24 bg-section-secondary ">
+            <div class="container mx-auto relative py:8 lg:pt-20">
+              <div class="curv absolute  "><img src="assets/images/Vector.png" class="pt-6 hidden lg:block" /></div>
+              <div class="hero bg-base-200">
+                <div class="hero-content flex-col lg:flex-row gap-10">
+                  <div>
+                    <div class="flex flex-col text-center justify-center items-center pb-3">
+                      <button class="btn bg-white rounded-3xl px-4  w-5/12"><i class="fa-solid fa-arrow-right items-center"></i> About us</button>
+                        <h1 class="text-4xl lg:text-5xl font-bold ">We design thoughtful, liveable spaces</h1>
+                        <p class="py-6">
+                            The barn house captivates with its blend of rustic charm and 
+                            modern sophistication, featuring weathered wood, sleek metal accents.
+                        </p>
+                    </div>
+                    <!-- card commercial -->
+                    <div class="card card-side bg-base-100 shadow-xl px-5 my-4">
+                      <figure>
+                        <img src="assets/images/commercial.png" alt="Movie"  class=""/>
+                      </figure>
+                      <div class="card-body">
+                        <h2 class="card-title">Commercial</h2>
+                        <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                      </div>
+                    </div>
+                    <!-- card rsidential -->
+                    <div class="card card-side bg-base-100 shadow-xl px-5 my-4">
+                      <figure>
+                        <img src="assets/images/residential.png" alt="Movie"  class=""/>
+                      </figure>
+                      <div class="card-body">
+                        <h2 class="card-title">Rsidential</h2>
+                        <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <img src="assets/images/Rectangle.png" class="rounded-lg shadow-2xl" />
+                </div>
+              </div>
+            </div>
+         </section>
     </main>
 </body>
 </html>
