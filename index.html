@@ -4,29 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rinterio</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/d50734a2a3.js" crossorigin="anonymous"></script>
     <!-- daisy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .font-manrope{
+            font-family: "Manrope", sans-serif;
+        }
+        /* body, section, main, header, div, nav, button, a, img, h1{
+          border : 2px solid red;
+        } */
+    </style>
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
                 clifford: '#da373d',
+                'btn-primary': '#ABEF5F',
+                'btn-secondary': 'rgba(171, 239, 95, 0.5)',
+                'section-primary': 'rgba(255, 255, 255, 1)',
               }
             }
           }
         }
       </script>
 </head>
-<body>
+<body class="font-manrope body">
     <main>
-        <header>
-            <!-- navbar -->
+        <header class="bg-section-primary container mx-auto">
+          <!-- navbar -->
+          <nav>
             <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <div class="flex navbar-start">
+                <a class="text-4xl font-semibold"><i class="fa-solid fa-arrow-right text-center bg-btn-primary rounded-full p-2 -rotate-45 font-semibold"></i> Rinterio</a>
+              </div>
+              <!-- center menu -->
+                <div class="hidden md:hidden lg:flex navbar-center">
+                  <ul class="menu menu-horizontal px-1 text-lg">
+                    <li><a>Home</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Portfolio</a></li>
+                    <li><a>Blogs</a></li>
+                    <li><a>Contact Us</a></li>
+                  </ul>
+                </div>
+                <!-- navbar button -->
+              <div class="hidden lg:flex navbar-end">
+                <a class="btn bg-bike-primary rounded-full text-center bg-white mr-2"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a class="btn bg-bike-primary rounded-full text-center bg-white mr-2"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="btn bg-btn-primary font-extrabold text-xl">Book Consult <i class="fa-solid fa-arrow-right text-center bg-black text-white rounded-full p-2 -rotate-45 font-semibold"></i></a>
+              </div>
+              <!-- dropdown menu -->
+                <div class="flex-1 navbar-end">
+                  <div class="dropdown md:block">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-5 w-5"
@@ -37,55 +76,38 @@
                           stroke-linecap="round"
                           stroke-linejoin="round"
                           stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h7" />
+                          d="M4 6h16M4 12h8m-8 6h16" />
                       </svg>
                     </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Homepage</a></li>
+                    <ul tabindex="0" class="-left-40 menu text-lg menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Home</a></li>
+                      <li><a>Services</a></li>
                       <li><a>Portfolio</a></li>
-                      <li><a>About</a></li>
+                      <li><a>Blogs</a></li>
+                      <li><a>Contact Us</a></li>
                     </ul>
                   </div>
                 </div>
-                <div class="navbar-center">
-                  <a class="btn btn-ghost text-xl">daisyUI</a>
-                </div>
-                <div class="navbar-end">
-                  <button class="btn btn-ghost btn-circle">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor">
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </button>
-                  <button class="btn btn-ghost btn-circle">
-                    <div class="indicator">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                      </svg>
-                      <span class="badge badge-xs badge-primary indicator-item"></span>
-                    </div>
-                  </button>
+                
+              </div>
+        </nav>
+
+        <!-- hero section -->
+         <section class=" my-14 lg:my-24">
+            <div class="hero">
+              <div class="hero-content flex-col text-center">
+                  <img src="assets/images/banner.png" class="rounded-lg shadow-2xl " />
+                <div>
+                  <h1 class="text-4xl lg:text-6xl font-extrabold mt-5">A barn house of this design has a striking appearance</h1>
+                  <p class="py-6 ">
+                    The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek
+                     metal accents, and large windows that flood the space with natural light.
+                  </p>
+                  <button class="btn rounded-3xl bg-btn-secondary w-full lg:w-2/12">View Details <i class="fa-solid fa-arrow-right text-center bg-btn-primary text-gray-800 rounded-full p-2 -rotate-45 font-semibold"></i></button>
                 </div>
               </div>
+            </div>
+         </section>
         </header>
     </main>
 </body>
